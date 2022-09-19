@@ -14,10 +14,27 @@ background: #FFFFFF;
 border-color: white;
 display: flex;
 
+
+
 .container {
   width: 613px;
   height: 1024px;
 }
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  div.background {
+    display: none;
+  }
+}
+
 .div1 {
   display: flex;
 }
@@ -176,9 +193,15 @@ letter-spacing: -0.015em;
 color: #FF9900;
 }
 .background {
-  width: 727px;
-height: 1024px;
+  width: 680px;
+height: 924px;
 background: #FF9900;
+}
+@media only screen and (max-width: 650px) {
+  .background {
+    display: block;
+    background-color: #FFFFFF;
+  }
 }
 .img {
   width: 507px;
@@ -204,8 +227,9 @@ margin-left: 200px;
 
 const Mard = () => {
   return (
-    <Style>
-      <div className='container'>
+    <Style className='container'>
+    
+      <div>
          <div className='div1'>
            <p className='f'>F</p>
            <p className='mard'>MARD</p>
